@@ -16,10 +16,7 @@ public class Main {
         System.out.print("Please enter the number of N\'s to use: ");
         int n = reader.nextInt();
 
-        System.out.print("Please enter the number of steps: ");
-        int steps = reader.nextInt();
-
-        Controller controller = new Controller(n, steps);
+        Controller controller = new Controller(n);
         controller.Run();
     }
 }

@@ -11,8 +11,7 @@ public class Initialization {
 
     public ArrayList<Queen> Initialize(int qNumber){
         ArrayList<Queen> Queens = new ArrayList<Queen>();
-        //Random random = new Random(System.currentTimeMillis());
-        Random random = new Random(10);
+        Random random = new Random(System.currentTimeMillis());
 
         for(int i = 0; i < qNumber; i++){
             Queens.add(new Queen(random.nextInt(qNumber),i));

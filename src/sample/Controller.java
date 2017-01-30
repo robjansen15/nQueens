@@ -5,13 +5,11 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class Controller {
-    public Controller(int numQueens, int numSteps){
+    public Controller(int numQueens){
         qNumber = numQueens;
-        steps = numSteps;
 
         queens = new ArrayList<Queen>();
-        random = new Random();
-        random.setSeed(10);
+        random = new Random(System.currentTimeMillis());
     }
 
 
@@ -21,11 +19,14 @@ public class Controller {
         System.out.println("Init:");
         Print();
 
+        int count = 0;
         while(true){
             //SEARCH AND CONFLICT COUNT
             UpdateAQueen();
             //CONFLICT COUNT
             UpdateConflicts();
+            //LETS SEE HOW MANY TRIES WE HAVE TO MAKE
+            count++;
 
             //FINAL STATE
             if(IsFinalState()){
@@ -37,6 +38,7 @@ public class Controller {
         Print();
 
         //PRINT PAIRS AND CONFLICTS
+        System.out.println("Steps: " + count);
         for(Iterator<Queen> q = queens.iterator(); q.hasNext();){
             Queen queen = q.next();
             System.out.println("Pair: (" + queen.getY() + "," + queen.getX() + ") Conflicts: " + queen.getConflicts());

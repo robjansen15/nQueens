@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="nQueens:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/nQueens_jar</output-path>
+    <root id="archive" name="nQueens.jar">
+      <element id="module-output" name="nQueens" />
+    </root>
+  </artifact>
+</component>
