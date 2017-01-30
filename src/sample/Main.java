@@ -13,8 +13,9 @@ public class Main {
         int n = reader.nextInt();
 
         ArrayList<ThreadObj> Threads = new ArrayList<ThreadObj>();
+        int numberOfThreads = 1000;
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < numberOfThreads; i++){
             Threads.add(new ThreadObj(n,i));
         }
 

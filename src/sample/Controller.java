@@ -16,6 +16,7 @@ public class Controller {
     public void Run(){
         //INITIALIZATION
         queens = new Initialization().Initialize(qNumber);
+
         System.out.println("Init:");
         Print();
 
