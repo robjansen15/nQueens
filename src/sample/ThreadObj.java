@@ -5,9 +5,9 @@ package sample;
  */
 public class ThreadObj extends Thread{
 
-    public ThreadObj(int i){
-        threadName = "Thread"+i;
-        controller = new Controller(i);
+    public ThreadObj(int n, int i){
+        threadName = "Thread "+i;
+        controller = new Controller(n);
     }
 
     public void run(){

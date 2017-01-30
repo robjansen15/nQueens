@@ -14,8 +14,8 @@ public class Main {
 
         ArrayList<ThreadObj> Threads = new ArrayList<ThreadObj>();
 
-        for(int i = 0; i < 2; i++){
-            Threads.add(new ThreadObj((n)));
+        for(int i = 0; i < 5; i++){
+            Threads.add(new ThreadObj(n,i));
         }
 
         for(Iterator<ThreadObj> t = Threads.iterator(); t.hasNext();) {
